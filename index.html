@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Grade Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background:#40E0D0 ;
+      padding: 40px;
+     
+    }
+    .box {
+      background: #e354f6;
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+     
+    }
+    h2 {
+      text-align: center;
+      color: #0077cc;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+
+  let name = prompt("Enter Student Name:");
+  let id = prompt("Enter Student ID:");
+  let s1 = parseInt(prompt("Enter marks for Subject 1:"));
+  let s2 = parseInt(prompt("Enter marks for Subject 2:"));
+  let s3 = parseInt(prompt("Enter marks for Subject 3:"));
+  let s4 = parseInt(prompt("Enter marks for Subject 4:"));
+  let s5 = parseInt(prompt("Enter marks for Subject 5:"));
+
+  let total = s1 + s2 + s3 + s4 + s5;
+  let avg = total / 5;
+  let grade = "";
+
+  if
+   (avg >= 90 && avg <= 100)
+    {
+    grade = "O";
+  } 
+  else if (avg >= 80) 
+  {
+    grade = "A";
+  }
+   else if (avg >= 70) 
+   {
+    grade = "B";
+  } 
+  else if (avg >= 60) 
+  {
+    grade = "C";
+  } 
+  else if (avg >= 0)
+   {
+    grade = "D";
+  } 
+  else 
+  {
+    grade = "Invalid";
+  }
+
+  
+  document.write("<div class='box'>");
+  document.write("<h1>Student Grade Report</h1>");
+  document.write("<p><strong>Name:</strong>  " + name +  "<br>");
+  document.write("<strong>ID:</strong> " + id + "<br><br>");
+
+  document.write("<strong>Subject Marks:</strong>"+"<br>");
+  document.write("Subject 1: " + s1 + "<br>");
+  document.write("Subject 2: " + s2 + "<br>");
+  document.write("Subject 3: " + s3 + "<br>");
+  document.write("Subject 4: " + s4 + "<br>");
+  document.write("Subject 5: " + s5 + "<br><br>");
+
+  document.write("<strong>Total:</strong> " + total + "<br>");
+  document.write("<strong>Average:</strong> " + avg + "<br>");
+  document.write("<strong>Grade:</strong> " + grade + "</p>");
+  document.write("</div>");
+</script>
+
+</body>
+</html>
